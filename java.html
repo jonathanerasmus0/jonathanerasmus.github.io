@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Jonathan</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header{
+            background-color: #d0cee9;
+            color: #2e1f1f;
+            padding: 1em;
+            text-align: center;
+        }
+        h1{
+            margin: 0;
+            font-size: 2em;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline;
+            text-decoration: none;
+        }
+        a {
+            color: #2e1f1f;
+            text-decoration: none;
+        }
+        main{
+            padding: 2em;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        label, input{
+            margin: 0.5em 0;
+        }
+        button{
+            padding: 0.5em 1em;
+            background-color: #ff8f8f;
+            border: none;
+            cursor: pointer;
+        }
+        footer{
+            background-color: #d0cee9;
+            color: #2e1f1f;
+            text-align: center;
+            padding: 1em;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Please help us build new homes</h1>
+        <nav>
+            <h1><img src="1.png" alt=""></h1>
+            <ul>
+                <li><a href="#buid">Build</a></li>
+                <li><a href="#Futures">Futures</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About This Organization</h2>
+            <p>I am looking to build homes for new refugees who have arrived in the United Kingdom.
+                Please donate as much money as you can afford. 
+            </p>
+
+        </section>
+        <section id="donation">
+            <h2>Make a Donation</h2>
+            <p>We need your help to keep our project running smoothly. Please consider making a donation</p>
+            <form id="donationForm">
+                <label for="donationAmount">Donation Amount:</label>
+                <input type="number" id="donationAmount" step="0.01" required />
+                <button type="submit" id="donateButton">Donate</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us: <a href="mailto:joesaudi@hotmail.com">joesaudi@hotmail.com</a></p>
+        <p>Phone: <a href="tel:+4915812456987">+4915812456987</a></p>
+        <p>&copy; 2023 Jonathan Davies</p>
+    </footer>
+
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var donationAmount = parseFloat(document.getElementById('donationAmount').value);
+    var messageDiv = document.getElementById('message');
+
+    if(donationAmount <= 0){
+        alert('You are very mean.')
+    }else{
+        alert('Thank you for donation of €' + donationAmount.toFixed(2));
+    }
+});
+    </script>
+
+ 
+
+
+</body>
+</html>
